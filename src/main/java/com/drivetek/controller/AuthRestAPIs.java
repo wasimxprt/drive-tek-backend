@@ -54,7 +54,7 @@ public class AuthRestAPIs {
 
         Authentication authentication = authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(
-                        loginRequest.getUsername(),
+                        loginRequest.getEmail(),
                         loginRequest.getPassword()
                 )
         );
@@ -79,7 +79,7 @@ public class AuthRestAPIs {
 
         // Creating user's account
         User user = new User(signUpRequest.getName(), signUpRequest.getUsername(),
-                signUpRequest.getEmail(), encoder.encode(signUpRequest.getPassword()));
+                signUpRequest.getEmail(), encoder.encode(signUpRequest.getPassword()), signUpRequest.getFname(), signUpRequest.getLname());
 
         Set<String> strRoles = signUpRequest.getRole();
         Set<Role> roles = new HashSet<>();

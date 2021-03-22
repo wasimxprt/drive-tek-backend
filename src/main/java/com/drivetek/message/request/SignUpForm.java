@@ -12,8 +12,32 @@ public class SignUpForm {
     @NotBlank
     @Size(min = 3, max = 50)
     private String username;
-
+    
     @NotBlank
+    @Size(min = 3, max = 50)
+    private String fname;
+    
+    @NotBlank
+    @Size(min = 3, max = 50)
+    private String lname;
+
+    public String getFname() {
+		return fname;
+	}
+
+	public void setFname(String fname) {
+		this.fname = fname;
+	}
+
+	public String getLname() {
+		return lname;
+	}
+
+	public void setLname(String lname) {
+		this.lname = lname;
+	}
+
+	@NotBlank
     @Size(max = 60)
     @Email
     private String email;

@@ -36,8 +36,32 @@ public class User{
     @NotBlank
     @Size(min=3, max = 50)
     private String name;
-
+    
     @NotBlank
+    @Size(min=3, max = 50)
+    private String fname;
+    
+    @NotBlank
+    @Size(min=3, max = 50)
+    private String lname;
+
+    public String getFname() {
+		return fname;
+	}
+
+	public void setFname(String fname) {
+		this.fname = fname;
+	}
+
+	public String getLname() {
+		return lname;
+	}
+
+	public void setLname(String lname) {
+		this.lname = lname;
+	}
+
+	@NotBlank
     @Size(min=3, max = 50)
     private String username;
 
@@ -59,8 +83,10 @@ public class User{
 
     public User() {}
 
-    public User(String name, String username, String email, String password) {
+    public User(String name, String username, String email, String password,String fname,String lname) {
         this.name = name;
+        this.fname = fname;
+        this.lname=lname;
         this.username = username;
         this.email = email;
         this.password = password;
