@@ -32,10 +32,6 @@ public class User{
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    @NotBlank
-    @Size(min=3, max = 50)
-    private String name;
     
     @NotBlank
     @Size(min=3, max = 50)
@@ -83,8 +79,8 @@ public class User{
 
     public User() {}
 
-    public User(String name, String username, String email, String password,String fname,String lname) {
-        this.name = name;
+    public User(String username, String email, String password,String fname,String lname) {
+        
         this.fname = fname;
         this.lname=lname;
         this.username = username;
@@ -106,14 +102,6 @@ public class User{
 
     public void setUsername(String username) {
         this.username = username;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public String getEmail() {
