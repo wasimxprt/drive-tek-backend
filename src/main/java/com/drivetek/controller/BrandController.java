@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.drivetek.model.Brand;
 import com.drivetek.repository.BrandRepository;
 
-@CrossOrigin(origins = "http://localhost:8080/")
+@CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
 @RequestMapping("/api")
 public class BrandController {

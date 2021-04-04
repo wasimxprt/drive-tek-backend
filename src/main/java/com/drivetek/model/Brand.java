@@ -14,7 +14,9 @@ public class Brand {
 	
 	@Column(name = "description")
 	private String description;
-
+	
+	public Brand() {}
+	
 	public Brand(String title, String description) {
 		super();
 		this.title = title;
